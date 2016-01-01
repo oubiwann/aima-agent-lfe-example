@@ -1,2 +1,4 @@
 rebar.lock
 _build/*
+ebin/*
+log/*
