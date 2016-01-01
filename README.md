@@ -6,7 +6,7 @@
 * ``rebar3``
 
 
-## Get and Build
+## Get, Build, & Start
 
 Download:
 
@@ -21,16 +21,16 @@ Compile:
 $ make build
 ```
 
-
-## Usage
-
 Start up the LFE REPL:
 
 ```bash
 $ make run
 ```
 
-Now you can run the example code:
+
+## Usage
+
+Once you're at the REPL, you can run the example code:
 
 ```cl
 >
