@@ -1,5 +1,11 @@
 # aima-agent-lfe-example
 
+## Dependencies
+
+* Erlang
+* ``rebar3``
+
+
 ## Get and Build
 
 Download:
@@ -18,13 +24,13 @@ $ make build
 
 ## Usage
 
-Start up the LFE REPL with the agent code automatically running:
+Start up the LFE REPL:
 
 ```bash
 $ make run
 ```
 
-Once in the LFE REPL:
+Now you can run the example code:
 
 ```cl
 >
