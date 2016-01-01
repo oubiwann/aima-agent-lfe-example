@@ -6,6 +6,14 @@
     #(initialized false)
     #(state undefined)))
 
+(defun environment (args)
+  (let ((env (environment)))
+    (lists:foldl
+      (match-lambda ((`#(,k ,v) acc)
+        (env-set acc k v)))
+      env
+      args)))
+
 (defun env-get (env key)
   (case (lists:keyfind key 1 env)
     ('false 'false)

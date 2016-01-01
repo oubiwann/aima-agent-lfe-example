@@ -12,7 +12,7 @@ build:
 	rebar3 compile
 
 run:
-	$(LFE) -pa ./ebin -s aima.agents.env
+	$(LFE) -pa ./ebin #-s aima.agents.env
 
 .PHONY: deps
 
