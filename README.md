@@ -33,7 +33,6 @@ $ make run
 Once you're at the REPL, you can run the example code:
 
 ```cl
->
 > (set env (aima.agents.env:environment `(#(max-steps 10))))
 (#(...)...)
 > (aima.agents.env:start env)
