@@ -17,3 +17,6 @@ run:
 .PHONY: deps
 
 rebuild: clean build
+
+repl:
+	$(LFE) -pa ./ebin
