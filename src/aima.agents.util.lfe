@@ -1,4 +1,5 @@
 (defmodule aima.agents.util
   (export all))
 
-(defun unknown-command () #(error "Unknown command."))
+(defun unknown-command ()
+  #(error "Unknown command."))
