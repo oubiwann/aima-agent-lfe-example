@@ -1,3 +1,5 @@
+;; !!! This module assumes that you have included the common.lfe file already!
+
 (defun environment ()
   '(#(agents ())
     #(step 0)
@@ -7,17 +9,17 @@
     #(state undefined)))
 
 (defun environment (args)
-  (let ((env (environment)))
-    (lists:foldl
-      (match-lambda ((`#(,k ,v) acc)
-        (env-set acc k v)))
-      env
-      args)))
+  (extend-proplist #'environment/0 #'env-set/3 args))
 
 (defun env-get (env key)
-  (case (lists:keyfind key 1 env)
-    ('false 'false)
-    (`#(,_ ,val) val)))
+  (proplist-get env key))
 
 (defun env-set (env key val)
-  (lists:keyreplace key 1 env `#(,key ,val)))
+  (proplist-set env key val))
+
+(defun loaded-aima-envs ()
+  "This is just a dummy function for display purposes when including from the
+  REPL (the last function loaded has its name printed in stdout).
+
+  This function needs to be the last one in this include."
+  'ok)

@@ -2,6 +2,7 @@
   (gen_server)
   (export all))
 
+(include-lib "aima.agents/include/common.lfe")
 (include-lib "aima.agents/include/envs.lfe")
 
 ;;; config functions
