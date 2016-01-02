@@ -2,3 +2,4 @@ rebar.lock
 _build/*
 ebin/*
 log/*
+scratch.lfe
