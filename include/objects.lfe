@@ -11,7 +11,7 @@
     #(alive? false)
     #(movable? true)
     #(pass-through? true)
-    #(loc #(1 1))
+    #(loc undefined)
     #(bump undefined)
     #(size 0.5)
     #(color black)
@@ -61,6 +61,9 @@
             #(size 0.001)
             #(amount 1)
             #(loc undefined))))
+
+(defun gold (args)
+  (extend-proplist #'gold/0 #'object-set/3 args))
 
 (defun pit ()
   (object '(#(name "pit")

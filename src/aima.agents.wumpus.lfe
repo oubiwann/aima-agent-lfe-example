@@ -4,7 +4,7 @@
 (include-lib "aima.agents/include/all.lfe")
 
 (defun aimless-agent ()
-  (aimless-wumpus-agent))
+  (aimless-agent '()))
 
 (defun aimless-agent (args)
   (aimless-wumpus-agent args))
