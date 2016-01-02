@@ -7,3 +7,6 @@
 * generate locations for pits, wumpus, and gold in one go
   - then set the location of each object, and
   - add all objects to the environment
+* README
+  - add image of AIMA book cover :-)
+  - add table of contents
