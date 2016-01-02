@@ -58,7 +58,8 @@
 (defun gold ()
   (object '(#(name "gold")
             #(repr "$")
-            #(size 0.1)
+            #(size 0.001)
+            #(amount 1)
             #(loc undefined))))
 
 (defun pit ()
