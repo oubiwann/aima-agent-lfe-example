@@ -107,9 +107,9 @@
     (lfe_io:format "~p. <print env tbd ...>~n" `(,(env-get state 'step)))))
 
 (defun do-iterate (state)
-  (if (any-agents? state)
-    (do-iterate-alive state)
-    state))
+  (if (run-term-check state)
+    state
+    (do-iterate-alive state)))
 
 (defun do-iterate-alive (state)
   (let* ((step (env-get state 'step))

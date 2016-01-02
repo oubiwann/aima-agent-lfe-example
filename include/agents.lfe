@@ -5,6 +5,15 @@
 
 ;;; Base agent
 
+(defun agent-body ()
+  (object `(#(alive? true)
+            #(name "agent")
+            #(repr undefined)
+            #(holding undefined))))
+
+(defun agent-body (args)
+  (extend-proplist #'agent-body/0 #'object-set/3 args))
+
 (defun agent ()
   `(#(program undefined)
     #(body ,(agent-body))
@@ -21,6 +30,12 @@
 
 (defun agent-set (agent key val)
   (proplist-set agent key val))
+
+(defun get-body (agent)
+  (agent-get agent 'body))
+
+(defun get-action (agent)
+  (agent-get agent 'action))
 
 (defun alive? (agent)
   (-> agent
@@ -58,6 +73,21 @@
 
 (defun release (env agent loc)
   'noop)
+
+;;; Other agents
+
+(defun prompting-user-agent ()
+  (agent))
+
+(defun prompting-user-agent (args)
+  (agent args))
+
+(defun aimless-wumpus-agent ()
+  (let ((wumpus-agent-body (agent-body `(#(contents (arrow))))))
+    (agent `(#(body ,wumpus-agent-body)))))
+
+(defun aimless-wumpus-agent (args)
+  (extend-proplist #'aimless-wumpus-agent/0 #'agent-set/3 args))
 
 (defun loaded-aima-agents ()
   "This is just a dummy function for display purposes when including from the

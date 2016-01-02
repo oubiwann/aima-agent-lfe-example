@@ -31,34 +31,53 @@
 (defun object-set (object key val)
   (proplist-set object key val))
 
+(defun get-loc (object)
+  (object-get object 'loca))
+
 ;;; Other objects
 
 (defun attached ()
-  (object `(#(movable? false))))
+  (object '(#(movable? false))))
 
 (defun attached (args)
   (extend-proplist #'attached/0 #'object-set/3 args))
 
 (defun obstacle ()
-  (attached `(#(repr "#")
+  (attached '(#(repr "#")
               #(pass-through? false))))
 
 (defun obstacle (args)
   (extend-proplist #'obstacle/0 #'object-set/3 args))
 
 (defun wall ()
-  (obstacle `(#(name "wall"))))
+  (obstacle '(#(name "wall"))))
 
 (defun wall (args)
   (extend-proplist #'wall/0 #'object-set/3 args))
 
-;;; Agent objects
+(defun gold ()
+  (object '(#(name "gold")
+            #(repr "$")
+            #(size 0.1)
+            #(loc undefined))))
 
-(defun agent-body ()
-  (object `(#(alive? true)
-            #(name "agent")
-            #(repr undefined)
-            #(holding undefined))))
+(defun pit ()
+  (object '(#(name "pit")
+            #(repr "O")
+            #(loc undefined))))
+
+(defun arrow ()
+  (object '(#(name "arrow")
+            #(repr "!")
+            #(size 0.01)
+            #(loc undefined))))
+
+(defun wumpus ()
+  (object '(#(name "wumpus")
+            #(repr "W")
+            #(size 0.7)
+            #(alive? true)
+            #(loc undefined))))
 
 (defun loaded-aima-objects ()
   "This is just a dummy function for display purposes when including from the
