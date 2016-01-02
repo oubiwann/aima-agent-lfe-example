@@ -61,10 +61,10 @@ Once you're at the REPL, you can run the example code:
 
 ```cl
 > (set agent (aima.agents.wumpus:aimless-agent))
-(#(...)...)
+...
 > (set env (aima.agents.wumpus:world `(#(max-steps 10)
                                        #(agents (,agent)))))
-(#(...)...)
+...
 > (aima.agents.env:start env)
 #(ok <0.80.0>)
 > (aima.agents.env:run env)
