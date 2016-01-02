@@ -13,7 +13,7 @@
 
 ## Introduction [&#x219F;](#contents)
 
-*Artificial Intelligence: A Modern Approach (AIMA)* is one of the best AI textbooks ever published (arguably *the* best AI textbook ...). Not only does the text contain some of the best and most lucid explanations you will find in the field, it comes with companion original Lisp source code, available [here](). An updated version of the code that runs on a recent release of SBCL is available from [this repository](). 
+*Artificial Intelligence: A Modern Approach (AIMA)* is one of the best AI textbooks ever published (arguably *the* best AI textbook ...). Not only does the text contain some of the best and most lucid explanations you will find in the field, it comes with companion original Lisp source code, available [here](http://aima.cs.berkeley.edu/). An updated version of the code that runs on a recent release of SBCL is available from [this repository](https://github.com/oubiwann/cl-aima) (its ``README`` provides setup, build, and usage instructions). 
 
 The 1995 first edition of the book is divided into eight parts with 27 chapters and two appendices. The chapters upon which this LFE example respository focuses are:
 
