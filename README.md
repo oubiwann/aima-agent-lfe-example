@@ -24,7 +24,7 @@ The 1995 first edition of the book is divided into eight parts with 27 chapters 
 
 In particular, chapters 2 and 6 will get special attention.
 
-Due to the differences between the simplified object system used in AIMA and the process-oriented approach employed by the Erlang VM and OTP, the LFE examples will diverge quite a bit. (Even though LFE and the Common Lisp dialect used in the book are book Lisp-2, the design of the Erlang VM is so distinctive as to shadow the similarities between the Lisps of LFE and CL.)
+Due to the differences between the simplified object system used in AIMA and the process-oriented approach employed by the Erlang VM and OTP, the LFE examples will diverge in from from the original quite a bit. (Even though LFE and the Common Lisp dialect used in the book are book Lisp-2, the design of the Erlang VM is so distinctive as to shadow the similarities between the Lisps of LFE and CL.)
 
 ## Dependencies [&#x219F;](#contents)
 
