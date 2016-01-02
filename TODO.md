@@ -1,12 +1,9 @@
 # TODO
 
-## Dev Plan
-
-TBD
-
-## Module Layout
-
-* ``aima.agents.env`` (``gen_server``)
-  * define an ``env`` behaviour with required funcs (e.g., ``print-state``, ``run``, ``iterate``) then use to implement simple, grid, etc.
-  * also include ``run/1`` (does ``start``, ``iterate``, and ``stop``)
-* ``aima.agents.wumpus`` (``gen_server``)
+* set pit locations in wumpus constructor
+* generate gold
+* generate wumpus
+* no gold in pit locations
+* generate locations for pits, wumpus, and gold in one go
+  - then set the location of each object, and
+  - add all objects to the environment
