@@ -8,20 +8,20 @@
 
 * [Introduction](#introduction-)
 * [Dependencies](#dependencies-)
-* [Get, Build, & Start](#building-)
+* [Get, Build, & Start](#get-build--start-)
 * [Usage](#usage-)
 
-## Introduction
+## Introduction [&#x219F;](#contents)
 
 TBD
 
-## Dependencies
+## Dependencies [&#x219F;](#contents)
 
 * Erlang
 * ``rebar3``
 
 
-## Get, Build, & Start
+## Get, Build, & Start [&#x219F;](#contents)
 
 Download:
 
@@ -43,7 +43,7 @@ $ make run
 ```
 
 
-## Usage
+## Usage [&#x219F;](#contents)
 
 Once you're at the REPL, you can run the example code:
 
