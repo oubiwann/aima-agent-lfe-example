@@ -1,5 +1,20 @@
 # aima-agent-lfe-example
 
+[![][aima-cover]][aima-cover]
+
+[aima-cover]: resources/images/aima-cover.jpg
+
+#### Contents
+
+* [Introduction](#introduction-)
+* [Dependencies](#dependencies-)
+* [Get, Build, & Start](#building-)
+* [Usage](#usage-)
+
+## Introduction
+
+TBD
+
 ## Dependencies
 
 * Erlang
