@@ -1,3 +1,5 @@
+;;;; Common include
+
 (defun extend-proplist (plist1-constructor plist1-setter plist2)
   (lists:foldl
     (match-lambda ((`#(,k ,v) acc)
@@ -11,7 +13,7 @@
     (`#(,_ ,val) val)))
 
 (defun proplist-set (plist key val)
-  (lists:keyreplace key 1 plist `#(,key ,val)))
+  (lists:keystore key 1 plist `#(,key ,val)))
 
 (defun loaded-aima-common ()
   "This is just a dummy function for display purposes when including from the

@@ -1,4 +1,9 @@
-;; !!! This module assumes that you have included the common.lfe file already!
+;;;; Environments include
+
+;; !!! This include file assumes that you have included the common.lfe,
+;; !!! objects.lfe, and agent.lfe files already!
+
+;;; Base environment
 
 (defun environment ()
   '(#(agents ())
@@ -16,6 +21,25 @@
 
 (defun env-set (env key val)
   (proplist-set env key val))
+
+(defun any-agents? (env)
+  (->> (env-get env 'agents)
+       (lists:map #'alive?/1)
+       (lists:member 'true)))
+
+;;; Grid environment
+
+(defun grid ()
+  (environment '(#(size #(2 2))
+                 #(grid 'undefined)
+                 #(objects ())
+                 #(start #(1 1))
+                 #(default-agents (#'prompting-user-agent/0))
+                 #(default-objects ((at edge wall)))
+                 #(default-dynamic-objects ()))))
+
+(defun grid (args)
+  (extend-proplist #'grid/0 #'env-set/3 args))
 
 (defun loaded-aima-envs ()
   "This is just a dummy function for display purposes when including from the

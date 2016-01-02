@@ -2,8 +2,7 @@
   (gen_server)
   (export all))
 
-(include-lib "aima.agents/include/common.lfe")
-(include-lib "aima.agents/include/envs.lfe")
+(include-lib "aima.agents/include/all.lfe")
 
 ;;; config functions
 
@@ -108,6 +107,11 @@
     (lfe_io:format "~p. <print env tbd ...>~n" `(,(env-get state 'step)))))
 
 (defun do-iterate (state)
+  (if (any-agents? state)
+    (do-iterate-alive state)
+    state))
+
+(defun do-iterate-alive (state)
   (let* ((step (env-get state 'step))
          (max (- (env-get state 'max-steps) 1))
          (state (env-set state 'step (+ 1 step))))
