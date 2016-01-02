@@ -3,6 +3,18 @@
 
 (include-lib "aima.agents/include/all.lfe")
 
+(defun aimless-agent ()
+  (aimless-wumpus-agent))
+
+(defun aimless-agent (args)
+  (aimless-wumpus-agent args))
+
+(defun world ()
+  (world '()))
+
+(defun world (args)
+  (wumpus-world (++ args `(#(term-check-func ,#'terminate?/1)))))
+
 (defun terminate? (env)
   (or (not (any-agents? env))
       (any-climbing-out? env)))
@@ -17,8 +29,4 @@
   (and (at-start? env (get-body agent))
        (== (get-action agent) 'climb)))
 
-(defun aimless-agent ()
-  (aimless-wumpus-agent))
 
-(defun aimless-agent (args)
-  (aimless-wumpus-agent args))
